@@ -15,11 +15,6 @@
   position: relative;
 }
 
-.back {
-  vertical-align: middle;
-  margin-right: 0.3rem;
-}
-
 .buttons {
   display: flex;
   justify-content: space-between;
