@@ -1,7 +1,8 @@
 import { createContext, useContext, useEffect, useState } from "react";
 
-// import { JSONBIN_ID, JSONBIN_API_KEY } from "../secret/Keys";
-const BASE_URL = "http://localhost:8000";
+// const BASE_URL = "http://localhost:8000";
+const BASE_URL = "https://my-json-server.typicode.com/AviralMehrotra/WanderMap";
+// hosted the json file from https://my-json-server.typicode.com/
 
 const CitiesContext = createContext();
 

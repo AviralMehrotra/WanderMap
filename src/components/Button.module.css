@@ -22,14 +22,15 @@
 }
 
 .position {
-  font-weight: 700;
+  padding: 1.1rem 1.1rem 0.5rem 1.1rem;
+  /* font-weight: 700; */
   position: absolute;
   z-index: 1000;
-  font-size: 1.4rem;
-  bottom: 4rem;
-  left: 50%;
+  font-size: 2.1rem;
+  bottom: 2rem;
+  left: 96%;
   transform: translateX(-50%);
-  background-color: var(--color-brand--2);
+  background-color: white;
   color: var(--color-dark--1);
   box-shadow: 0 0.4rem 1.2rem rgba(36, 42, 46, 0.16);
 }
