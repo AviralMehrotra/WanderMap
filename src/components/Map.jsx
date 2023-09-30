@@ -13,7 +13,7 @@ import { useCities } from "../contexts/CitiesContext";
 import { useGeolocation } from "../hooks/useGeoLocation";
 import Button from "./Button";
 import MapSpinner from "./MapSpinner";
-import useURLPosition from "../hooks/useURLPosition";
+import { useURLPosition } from "../hooks/useURLPosition";
 
 const formatDate = (date) =>
   new Intl.DateTimeFormat("en", {
@@ -32,13 +32,13 @@ function Map() {
     getPosition,
   } = useGeolocation();
 
-  const [mapLat, mapLong] = useURLPosition();
+  const [mapLat, mapLng] = useURLPosition();
 
   useEffect(
     function () {
-      if (mapLat && mapLong) setMapPosition([mapLat, mapLong]);
+      if (mapLat && mapLng) setMapPosition([mapLat, mapLng]);
     },
-    [mapLat, mapLong]
+    [mapLat, mapLng]
   );
 
   useEffect(
@@ -76,7 +76,7 @@ function Map() {
         />
         {cities.map((city) => (
           <Marker
-            position={[city.position.lat, city.position.long]}
+            position={[city.position.lat, city.position.lng]}
             key={city.id}
           >
             <Popup>
@@ -104,7 +104,7 @@ function DetectClick() {
   useMapEvents({
     click: (e) =>
       // console.log(e)
-      navigate(`form?lat=${e.latlng.lat}&${e.latlng.lng}`),
+      navigate(`form?lat=${e.latlng.lat}&lng=${e.latlng.lng}`),
   });
 }
 

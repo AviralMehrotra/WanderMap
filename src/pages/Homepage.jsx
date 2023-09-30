@@ -18,7 +18,7 @@ export default function Homepage() {
           the map of life's adventures. <br />
           Let's map your journeys together, one pin at a time.
         </h2>
-        <Link to="/app" className="cta">
+        <Link to="/login" className="cta">
           Start Tracking
         </Link>
       </section>

@@ -97,6 +97,7 @@
   background-color: var(--color-dark--1);
   color: white;
   font-weight: 500;
+  cursor: pointer;
 }
 
 .button:hover {
